@@ -1,0 +1,23 @@
+<ng-container *ngIf="(manga$ | async) as manga">
+  <div class="first-page">
+    <div class="first-image">
+      <img class="first-page" [src]="manga.pageURLs[0]">
+    </div>
+
+    <div class="first-text">
+      <p>Name: {{ manga.title }}</p><p>Uploaded: {{ manga.uploadedAt | agoTime }}</p>
+      <p>Page count: {{ manga.pageURLs.length }}</p>
+      <p><a href="Favorite.php?name">Favorite</a></p>
+  </div>
+  </div>
+  <br>
+
+  <div class="all-pages" >
+    <app-center>
+      <br>
+      <a *ngFor='let page of manga.pageURLs; let i = index' [routerLink]="'./' + (i + 1)" routerLinkActive="active">
+        <img class="all-pages" [src]="page">
+      </a>
+    </app-center>
+  </div>
+</ng-container>

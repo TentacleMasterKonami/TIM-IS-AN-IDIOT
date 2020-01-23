@@ -1,0 +1,17 @@
+<div class="content">
+  <div style="padding: 20px;">
+    <app-center>
+      <a *ngFor='let manga of mangas' [routerLink]="'/manga/' + manga.id" routerLinkActive="active">
+
+        <div class="element">
+          <app-center>
+            <img [src]="manga.thumbURL">
+            <br>
+            {{manga.title}}
+          </app-center>
+        </div>
+
+      </a>
+    </app-center>
+  </div>
+</div>

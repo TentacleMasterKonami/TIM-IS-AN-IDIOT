@@ -1,0 +1,28 @@
+div.image {
+	width: 90%;
+	position: relative;
+	top: 10px;
+}
+img.image {
+	width: 100%;
+}
+a.linkL {
+	width: 30%;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	height: 100%;
+}
+a.linkR {
+	width: 70%;
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	height: 100%;
+}
+a.link {
+	color: white;
+}
+a.num {
+	color: white;
+}

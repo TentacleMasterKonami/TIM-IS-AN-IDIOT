@@ -1,0 +1,13 @@
+<ng-container *ngIf="(manga$ | async) as manga">
+  <ng-container *ngIf="(page$ | async) as page">
+    <app-center>
+      <div class="image">
+        <img id="img" class="image" [src]="manga.pageURLs[page-1]">
+
+        <a class="linkL" [routerLink]="page > 1 ? ('../' + (page-1)) : '..'" routerLinkActive="active"></a>
+
+        <a class="linkR" [routerLink]="page < manga.pageURLs.length  ? ('../' + (page+1)): '..'" routerLinkActive="active"></a>
+      </div>
+    </app-center>
+  </ng-container>
+</ng-container>

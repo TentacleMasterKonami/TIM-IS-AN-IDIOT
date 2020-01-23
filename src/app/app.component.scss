@@ -1,0 +1,95 @@
+@import '~@angular/material/theming';
+
+
+
+$PINK_50: mat-color($mat-pink, 50); // #FCE4EC; /*Pink 50*/
+$PINK_A200: mat-color($mat-pink, A200); // #FF4081; /*Pink A200*/
+
+@font-face {
+	font-family: myFont;
+	src: url('/assets/konami-font.woff2') format('woff2'),
+			url('/assets/konami-font.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+nav {
+  background-color: $PINK_50; // #FCE4EC; /*Pink 50*/
+  height: 54px;
+}
+
+.logo {
+	height: 44px;
+	margin: 5px;
+	margin-right: 25px;
+	display: inline;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	display: inline;
+}
+
+.navbar {
+	list-style-type: none;
+	margin-top: 2px;
+	padding: 16px 10px;
+	display: inline;
+	color: $PINK_A200; // #FF4081; /*Pink A200*/
+	border-left: 2px solid $PINK_A200; // #FF4081; /*Pink A200*/
+	font-family: 'Roboto', sans-serif;
+}
+
+.navbar:hover {
+	background-color:$PINK_A200; // #FF4081; /*Pink A200*/
+	color: white;
+}
+
+.navbar.right {
+	float: right;
+}
+
+#search {
+	height: 30px;
+	margin-top: 11px;
+	border: 1px solid #ccc;
+	border-right: 0px;
+	border-radius: 4px 0 0 4px;
+	width: 200px;
+
+	// Style
+	float: left;
+}
+
+#searchconf {
+	height: 30px;
+	margin-top: 11px;
+	border: 1px solid $PINK_A200; // #FF4081; /*Pink A200*/
+	border-radius: 0 4px 4px 0;
+	width: 30px;
+	background-color: $PINK_A200; // #FF4081; /*Pink A200*/
+	font-family: myFont;
+	font-size: 20px;
+	cursor: pointer;
+
+	// Style
+	float: left;
+}
+
+#search:hover {
+	background-color: #fafafa;
+	transition-duration: 500ms;
+	transition-property: all;
+}
+
+.searchText {
+	height: 30px;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+form {
+	margin-right: 20px;
+}
